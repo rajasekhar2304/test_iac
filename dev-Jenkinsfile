@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('SCM Checkout') {
             steps {
-                echo 'Hello World'
+                git "https://github.com/rajasekhar2304/JavaCalculator.git"
             }
         }
         stage('Test') {
