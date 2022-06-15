@@ -12,5 +12,10 @@ pipeline {
                 echo 'Hello World!'
             }
         }
+        stage("Echo Response") {
+            steps {
+                echo "Job Done"
+            }
+        }
     }
 }
