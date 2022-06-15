@@ -2,19 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('SCM Checkout') {
+        stage("SCM Checkout") {
             steps {
-                git "https://github.com/rajasekhar2304/JavaCalculator.git"
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Hello World!'
-            }
-        }
-        stage("Echo Response") {
-            steps {
-                echo "Job Done"
+                git branch: "main", url: "https://github.com/rajasekhar2304/test_iac.git"
             }
         }
     }
