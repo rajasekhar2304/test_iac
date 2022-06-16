@@ -5,8 +5,7 @@ pipeline {
         stage("SCM Checkout") {
             steps {
                 git branch: 'main',
-                credentialsId: "raajasekharr@gmail.com",
-                credentialsPassword: "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",
+                credentialsId: "raajasekharr@gmail.com",                
                 url: "https://github.com/rajasekhar2304/test_iac.git"
             }
         }
