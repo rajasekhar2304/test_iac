@@ -6,9 +6,12 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: "github_access",                
-                    url: "https://github.com/rajasekhar2304/test_iac.git"
-
-                sh "ls -l"
+                    url: "https://github.com/rajasekhar2304/test_iac.git"            
+            }
+        }
+        stage('Clean Up') {
+            steps {
+                sh "sh script.sh"
             }
         }
     }
