@@ -1,6 +1,6 @@
 #!/bin/bash
 #delete old files
 
-ls -l /home/devrabbit/Desktop/DevOps/shell_scripting/test
-sudo -s find /home/devrabbit/Desktop/DevOps/shell_scripting/test -type f -name '*.log' -mmin +30 -delete | sort
-ls -l /home/devrabbit/Desktop/DevOps/shell_scripting/test
+ls -l /var/lib/jenkins/workspace/Pipeline_with_SCM
+sudo -s find /var/lib/jenkins/workspace/Pipeline_with_SCM -type f -name '*.log' -mmin +60 -delete | sort
+ls -l /var/lib/jenkins/workspace/Pipeline_with_SCM
