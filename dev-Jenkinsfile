@@ -9,10 +9,10 @@ pipeline {
                     url: "https://github.com/rajasekhar2304/test_iac.git"            
             }
         }
-        stage('Clean Up') {
-            steps {
-                sh "sh /var/lib/jenkins/workspace/Pipeline_with_SCM/scripts/script.sh"
-            }
-        }
+        // stage('Clean Up') {
+        //     steps {
+        //         sh "sh /var/lib/jenkins/workspace/Pipeline_with_SCM/scripts/script.sh"
+        //     }
+        // }
     }
 }
