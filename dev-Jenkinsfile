@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Clean Up') {
             steps {
-                sh "sh /scripts/script.sh"
+                sh "sh /test_iac/scripts/script.sh"
             }
         }
     }
