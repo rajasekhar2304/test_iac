@@ -7,6 +7,12 @@ pipeline {
                 git branch: 'master', 
                 credentialsId: 'github_access',
                 url: 'https://github.com/rajasekhar2304/my-react-app.git'
+                
+                dir("jenkinsFileCall") {
+                    git branch: 'master',
+                    credentialsId: 'github_access',
+                    url: 'https://github.com/rajasekhar2304/test_iac.git'
+                }
             }
         }
         stage("Build") {
