@@ -5,8 +5,13 @@ pipeline {
         stage("SCM Checkout") {
             steps {                
                 git branch: 'master', 
-                credentialsId: 'github_access',
-                url: 'https://github.com/rajasekhar2304/my-react-app.git'                
+                    credentialsId: 'github_access',
+                    url: 'https://github.com/rajasekhar2304/my-react-app.git'
+
+                dir("test_iac") {
+                    git branch: 'main',
+                    credentialsId: 'github_access',
+                    url: 'https://github.com/rajasekhar2304/test_iac.git'
                 }
             }
         }
