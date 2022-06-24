@@ -23,6 +23,12 @@ pipeline {
                 sh "npm run build"
             }
         }
+        stage("Ping status check") {
+            steps {
+                echo "Executing ansible playbook"
+                ansiblePlaybook colorized: true, playbook: 'pingPB.yaml'
+            }
+        }
         // stage('Clean Up') {
         //     steps {
         //         sh "sh /var/lib/jenkins/workspace/Pipeline_with_SCM/scripts/script.sh"
