@@ -1,0 +1,9 @@
+---
+- name: Enusre to enable the connection to appserver
+  hosts: all
+  become: sudo
+
+  tasks:
+    - name: Ping status
+      ping:
+...
