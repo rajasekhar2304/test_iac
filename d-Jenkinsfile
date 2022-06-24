@@ -26,7 +26,7 @@ pipeline {
         stage("Ping status check") {
             steps {
                 echo "Executing ansible playbook"
-                ansiblePlaybook colorized: true, playbook: 'pingPB.yaml'
+                ansiblePlaybook colorized: true, playbook: 'test_iac/pingPB.yaml'
             }
         }
         // stage('Clean Up') {
