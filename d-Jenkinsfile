@@ -23,11 +23,16 @@ pipeline {
                 sh "npm run build"
             }
         }
-        stage("Ping status check") {
+        stage("Deploy") {
             steps {                
-                ansiblePlaybook credentialsId: 'DEV_APP_SERVER', disableHostKeyChecking: true, installation: 'ansible', inventory: 'test_iac/inventories/dev.inv', limit: 'appServer', playbook: 'test_iac/pingPB.yml'
+                ansiblePlaybook credentialsId: 'DEV_APP_SERVER', disableHostKeyChecking: true, installation: 'ansible', inventory: 'test_iac/inventories/dev.inv', limit: 'appServer', playbook: 'test_iac/buildCopyPB.yml'
             }
         }
+        // stage("Ping status check") {
+        //     steps {                
+        //         ansiblePlaybook credentialsId: 'DEV_APP_SERVER', disableHostKeyChecking: true, installation: 'ansible', inventory: 'test_iac/inventories/dev.inv', limit: 'appServer', playbook: 'test_iac/pingPB.yml'
+        //     }
+        // }
         // stage('Clean Up') {
         //     steps {
         //         sh "sh /var/lib/jenkins/workspace/Pipeline_with_SCM/scripts/script.sh"
@@ -35,3 +40,5 @@ pipeline {
         // }
     }
 }
+
+//   /devapps/devrabbit/nodejsApps

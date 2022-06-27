@@ -1,2 +1,5 @@
 [appServer]
 10.2.8.51 ansible_user=dradmin
+
+[jenkinsServer]
+10.2.8.50 ansible_user=dradmin
