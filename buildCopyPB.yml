@@ -7,7 +7,5 @@
     - name: Copy build files from Jenkins workspace to the directory in the appserver
       synchronize:
         src: /var/lib/jenkins/workspace/Rajasekhar/ansibleDemo/build/*
-        dest: /devapps/devrabbit/nodejsApps/raja/
-        mode: push
-      delegate_to: appServer      
+        dest: /devapps/devrabbit/nodejsApps/raja/    
 ...
