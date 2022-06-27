@@ -8,6 +8,6 @@
       synchronize:
         src: /var/lib/jenkins/workspace/Rajasekhar/ansibleDemo/build/*
         dest: /devapps/devrabbit/nodejsApps/raja/
-        when:
-          - inventory_hostname in groups['jenkinsServer']
+      when:
+        - inventory_hostname in groups['jenkinsServer']
 ...
