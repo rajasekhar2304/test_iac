@@ -5,7 +5,9 @@
 
   tasks:
     - name: Copy build files from Jenkins workspace to the directory in the appserver
-      copy:
+      synchronize:
         src: /var/lib/jenkins/workspace/Rajasekhar/ansibleDemo/build/*
         dest: /devapps/devrabbit/nodejsApps/raja/
+        when:
+          - inventory_hostname in groups['jenkinsServer']
 ...
