@@ -8,6 +8,6 @@
       synchronize:
         src: /var/lib/jenkins/workspace/Rajasekhar/ansibleDemo/build/*
         dest: /devapps/devrabbit/nodejsApps/raja/
-      when:
-        - inventory_hostname in groups['jenkinsServer']
+        mode: push
+        delegate_to: jenkinsServer      
 ...
