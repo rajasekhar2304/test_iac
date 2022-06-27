@@ -25,7 +25,7 @@ pipeline {
         }
         stage("Ping status check") {
             steps {                
-                ansiblePlaybook credentialsId: 'DEV_APP_SERVER', disableHostKeyChecking: true, installation: 'ansible', inventory: '/inventories/dev.inv', limit: 'appServer', playbook: '/pingPB.yml'
+                ansiblePlaybook credentialsId: 'DEV_APP_SERVER', disableHostKeyChecking: true, installation: 'ansible', inventory: 'test_iac/inventories/dev.inv', limit: 'appServer', playbook: 'test_iac/pingPB.yml'
             }
         }
         // stage('Clean Up') {
