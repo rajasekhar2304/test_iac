@@ -9,5 +9,5 @@
         src: /var/lib/jenkins/workspace/Rajasekhar/ansibleDemo/build/*
         dest: /devapps/devrabbit/nodejsApps/raja/
         mode: push
-        delegate_to: jenkinsServer      
+      delegate_to: jenkinsServer      
 ...
