@@ -2,11 +2,10 @@
 - hosts: all
   become: sudo
   tasks:
-    - name: Copy build files from Jenkins workspace to the directory in the appserver
+    - name: Copy build files from Jenkins to application server
       copy:
         src: /var/lib/jenkins/workspace/Rajasekhar/ansibleDemo/
-        dest: /devapps/devrabbit/nodejsApps/raja/
-        become: sudo
+        dest: /devapps/devrabbit/nodejsApps/raja/        
         owner: root
         group: root
         mode: '0777'
