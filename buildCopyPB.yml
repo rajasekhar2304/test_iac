@@ -4,7 +4,7 @@
   tasks:
     - name: Copy build files from Jenkins to application server
       copy:
-        src: /var/lib/jenkins/workspace/Rajasekhar/ansibleDemo/
+        src: /var/lib/jenkins/workspace/raja/ansibleDemo/
         dest: /devapps/devrabbit/nodejsApps/raja/     
         remote_src: yes
       
