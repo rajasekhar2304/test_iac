@@ -1,6 +1,6 @@
 ---
 - name: Enusre to copy build files from Jenkins server to appliation server
-  hosts: appServer
+  hosts: all
   become: sudo
 
   tasks:
