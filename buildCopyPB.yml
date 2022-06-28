@@ -1,8 +1,6 @@
 ---
-- name: Enusre to copy build files from Jenkins server to appliation server
-  hosts: all
-  become: yes
-
+- hosts: all
+  become: true
   tasks:
     - name: Copy build files from Jenkins workspace to the directory in the appserver
       copy:
@@ -11,5 +9,4 @@
         become: yes
         owner: root
         group: root
-        mode: '0644'        
-...
+        mode: '0644'
