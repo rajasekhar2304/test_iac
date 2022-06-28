@@ -9,3 +9,5 @@
         owner: root
         group: root
         mode: '0777'
+      when: 
+        - inventory_hostname in groups['appServer']
