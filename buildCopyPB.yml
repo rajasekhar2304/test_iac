@@ -5,7 +5,8 @@
 
   tasks:
     - name: Copy build files from Jenkins workspace to the directory in the appserver
-      synchronize:
+      copy:
         src: /var/lib/jenkins/workspace/Rajasekhar/ansibleDemo/build/*
-        dest: /devapps/devrabbit/nodejsApps/raja/    
+        dest: /devapps/devrabbit/nodejsApps/raja/
+        remote_src: yes    
 ...
