@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  become: sudo
+  become: yes
   tasks:
     - name: Copy build files from Jenkins to application server
       copy:
