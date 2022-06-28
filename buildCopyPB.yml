@@ -1,13 +1,14 @@
 ---
 - name: Enusre to copy build files from Jenkins server to appliation server
   hosts: all
-  become: sudo
+  become: yes
 
   tasks:
     - name: Copy build files from Jenkins workspace to the directory in the appserver
       copy:
-        src: /var/lib/jenkins/workspace/Rajasekhar/ansibleDemo
+        src: /var/lib/jenkins/workspace/Rajasekhar/ansibleDemo/
         dest: /devapps/devrabbit/nodejsApps/raja/
+        become: yes
         owner: root
         group: root
         mode: '0644'        
