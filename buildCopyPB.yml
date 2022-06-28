@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  sudo: yes
+  become: sudo
   tasks:
     - name: Copy build files from Jenkins workspace to the directory in the appserver
       copy:
