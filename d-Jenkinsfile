@@ -5,12 +5,12 @@ pipeline {
         stage("SCM Checkout") {
             steps {                
                 git branch: 'master', 
-                    credentialsId: 'rajaGitAccess',
+                    credentialsId: 'rajaGithubAccess',
                     url: 'https://github.com/rajasekhar2304/my-react-app.git'
 
                 dir("test_iac") {
                     git branch: 'main',
-                        credentialsId: 'rajaGitAccess',
+                        credentialsId: 'rajaGithubAccess',
                         url: 'https://github.com/rajasekhar2304/test_iac.git'
                 }
             }
