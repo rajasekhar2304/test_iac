@@ -24,8 +24,7 @@ pipeline {
             }
         }
         stage("Deploy") {
-            steps {   
-                ansiblePlaybook credentialsId: 'JENKINS_APP_SERVER', disableHostKeyChecking: true, installation: 'ansible', inventory: 'test_iac/inventories/dev.inv', playbook: 'test_iac/buildCopyPB.yml'             
+            steps {           
                 ansiblePlaybook credentialsId: 'DEV_APP_SERVER', disableHostKeyChecking: true, installation: 'ansible', inventory: 'test_iac/inventories/dev.inv', limit: 'appServer', playbook: 'test_iac/buildCopyPB.yml'
             }
         }
