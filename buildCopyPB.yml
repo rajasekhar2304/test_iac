@@ -5,10 +5,6 @@
     - name: Copy build files from Jenkins to application server
       copy:
         src: /var/lib/jenkins/workspace/Rajasekhar/ansibleDemo/
-        dest: /devapps/devrabbit/nodejsApps/raja/        
-        owner: root
-        group: root
-        mode: '0777'
+        dest: /devapps/devrabbit/nodejsApps/raja/     
         remote_src: yes
-      when: 
-        - inventory_hostname in groups['appServer']
+      
