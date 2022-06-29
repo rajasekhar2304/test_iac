@@ -2,11 +2,12 @@
 - hosts: appServer
   become: yes
   tasks:
-  synchronize:
-    src: /var/lib/jenkins/workspace/raja/ansibleDemo/
-    dest: /devapps/devrabbit/nodejsApps/raja/
-    rsync_opts:
-      - "--exclude=node_modules"
+    - name: Copy build files from Jenkins to application server
+      synchronize:
+        src: /var/lib/jenkins/workspace/raja/ansibleDemo/
+        dest: /devapps/devrabbit/nodejsApps/raja/
+        rsync_opts:
+          - "--exclude=node_modules"
 # ---
 # - hosts: all
 #   become: yes
