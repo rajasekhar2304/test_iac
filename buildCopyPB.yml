@@ -1,20 +1,22 @@
 ---
-- hosts: appServer
-  become: yes
-  tasks:
-    - name: Copy build files from Jenkins to application server
-      synchronize:
-        src: /var/lib/jenkins/workspace/raja/ansibleDemo/
-        dest: /devapps/devrabbit/nodejsApps/raja/     
-        mode: push
-      delegate_to: jenkinsServer
-# ---
-# - hosts: all
+# - hosts: appServer
 #   become: yes
 #   tasks:
 #     - name: Copy build files from Jenkins to application server
-#       copy:
+#       synchronize:
 #         src: /var/lib/jenkins/workspace/raja/ansibleDemo/
 #         dest: /devapps/devrabbit/nodejsApps/raja/     
-#         remote_src: yes
+#         mode: push
+#       delegate_to: jenkinsServer
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Copy build files from Jenkins to application server
+      copy:
+        src: /var/lib/jenkins/workspace/raja/ansibleDemo/
+        dest: /devapps/devrabbit/nodejsApps/raja/     
+        owner: root
+        group: root
+        mode: '0777'
       
