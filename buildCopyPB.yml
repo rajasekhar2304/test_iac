@@ -1,6 +1,7 @@
 ---
 - hosts: appServer
   become: yes
+  gather_facts: false
   tasks:
     - name: Copy build files from Jenkins to application server
       synchronize:
