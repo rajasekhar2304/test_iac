@@ -5,6 +5,7 @@
   roles:
     - apache2-install
     - synchronizeModule
+    - apache2-restart
     
 # ---
 # - hosts: all
