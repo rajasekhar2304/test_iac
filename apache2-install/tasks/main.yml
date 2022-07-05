@@ -1,3 +1,2 @@
 ---
 - import_tasks: apacheInstall.yml
-- import_tasks: apacheRestart.yml
