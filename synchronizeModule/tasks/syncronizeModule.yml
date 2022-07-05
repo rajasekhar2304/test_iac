@@ -2,5 +2,5 @@
   synchronize:
           src: /var/lib/jenkins/workspace/raja/ansibleDemo/
           dest: /devapps/devrabbit/nodejsApps/raja/
-  rsync_opts:
-          - "--exclude=node_modules"
+          rsync_opts:
+                - "--exclude=node_modules"
