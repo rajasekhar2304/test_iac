@@ -1,0 +1,4 @@
+- name: Stop apache httpd
+  service:
+          name: apache2
+          state: stopped
