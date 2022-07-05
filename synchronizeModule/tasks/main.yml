@@ -1,2 +1,2 @@
 ---
-- import_tasks: synchronizeModule.yml
+- import_tasks:  syncronizeModule.yml
