@@ -1,4 +1,4 @@
 - name: Restarting apache httpd
   service:
-          name: apche2
+          name: apache2
           state: restarted
