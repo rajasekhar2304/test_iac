@@ -2,6 +2,8 @@
 - hosts: appServer
   become: yes
   gather_facts: false
+  var_files:
+    - "./vars/dev/extra_vars.yml"
   roles:
     - apache2_install
     - app_deploy
