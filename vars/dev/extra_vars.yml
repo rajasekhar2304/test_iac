@@ -1,0 +1,3 @@
+---
+src_dir : "/var/lib/jenkins/workspace/raja/ansibleDemo/build"
+dest_dir : "/var/www/html/"

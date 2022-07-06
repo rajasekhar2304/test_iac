@@ -1,6 +1,0 @@
-- name: Copy build files from Jenkins to application server
-  synchronize:
-          src: /var/lib/jenkins/workspace/raja/ansibleDemo/build
-          dest: /var/www/html/
-          rsync_opts:
-                - "--exclude=node_modules"

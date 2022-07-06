@@ -1,0 +1,8 @@
+---
+- hosts: appServer
+  become: yes
+  gather_facts: false
+  roles:
+    - apache2_install
+    - app_deploy
+    - apache2_restart
