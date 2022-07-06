@@ -31,7 +31,7 @@ pipeline {
                     installation: 'ansible', 
                     inventory: 'test_iac/inventories/dev.inv', 
                     limit: 'appServer', 
-                    playbook: 'test_iac/buildCopyPB.yml'
+                    playbook: 'test_iac/nodeAppDeploy.yml'
             }
         }
         // stage("Ping status check") {
