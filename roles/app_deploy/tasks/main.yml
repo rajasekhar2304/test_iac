@@ -1,6 +1,6 @@
 - name: Copy build files from Jenkins to application server
   synchronize:
-          src: {{ src_dir }}
-          dest: {{ dest_dir }}
+          src: "{{ src_dir }}"
+          dest: "{{ dest_dir }}"
           rsync_opts:
                 - "--exclude=node_modules"
