@@ -4,10 +4,10 @@
     dest: "{{ dest_dir }}"
     rsync_opts:
         - "--exclude=node_modules"
-        - "--exclude=kanth"
+        - "--exclude=test_iac"
         - "--exclude=.git"
         - "--exclude=.gitignore"
         - "--exclude=README.md"
-        - "--exclude=kanth@tmp"
+        - "--exclude=test_iac@tmp"
   tags:
       - copy_files
