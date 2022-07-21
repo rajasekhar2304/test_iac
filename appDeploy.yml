@@ -1,0 +1,21 @@
+---
+- hosts: jenkinsserver
+  become: yes
+  gather_facts: false
+  vars_files:
+    - "./config/development/extra_vars.yml"
+  
+  roles:
+   - role: delete
+     tags:
+      - clean_files
+   - role: copy
+     tags:
+      - copy_files
+   - role: filepermission
+     tags:
+      - chmod_operation
+   - role: ebDeploy
+     tags:
+      - ebdeploy
+  
