@@ -32,7 +32,7 @@ pipeline {
                     disableHostKeyChecking: true, 
                     installation: 'ansible', 
                     inventory: 'test_iac/inventories/dev.inv', 
-                    limit: 'awsAppServer', 
+                    limit: 'jenkinsServer', 
                     playbook: 'test_iac/appDeploy.yml',
                     tags: 'clean_files,copy_files,chmod_operation'
             }
@@ -44,7 +44,7 @@ pipeline {
                     disableHostKeyChecking: true, 
                     installation: 'ansible', 
                     inventory: 'test_iac/inventories/dev.inv', 
-                    limit: 'awsAppserver', 
+                    limit: 'jenkinsServer', 
                     playbook: 'test_iac/appDeploy.yml',
                     tags: 'ebdeploy'                
             }
