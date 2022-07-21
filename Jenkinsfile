@@ -10,11 +10,11 @@ pipeline {
         stage("SCM Checkout") {
             steps {
                 git branch: 'master',
-                    credentialsId: "RajaGithubAccess",            
+                    credentialsId: "rajaGitAccess",            
                     url: 'https://github.com/rajasekhar2304/my-react-app.git'
-                dir("kanth") {
+                dir("test_iac") {
                     git branch: 'main',
-                    credentialsId: "RajaGithubAccess",
+                    credentialsId: "rajaGitAccess",
                     url: 'https://github.com/rajasekhar2304/test_iac.git'
             }
         }  
@@ -28,7 +28,7 @@ pipeline {
         stage('copy the files') {
             steps {
                 ansiblePlaybook become: true,
-                    credentialsId: 'JENKINS_APP_SERVER',
+                    credentialsId: 'eb-demo-jenkins',
                     disableHostKeyChecking: true, 
                     installation: 'ansible', 
                     inventory: 'test_iac/inventories/dev.inv', 
@@ -40,7 +40,7 @@ pipeline {
         stage('EB Deployment') {
             steps {
                 ansiblePlaybook become: true, 
-                    credentialsId: 'JENKINS_APP_SERVER',
+                    credentialsId: 'eb-demo-jenkins',
                     disableHostKeyChecking: true, 
                     installation: 'ansible', 
                     inventory: 'test_iac/inventories/dev.inv', 
