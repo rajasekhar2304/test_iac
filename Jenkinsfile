@@ -7,7 +7,7 @@ pipeline {
                     credentialsId: "rajaGitAccess",            
                     url: 'https://github.com/rajasekhar2304/my-react-app.git'
                 dir("test_iac") {
-                    git branch: 'main',
+                    git branch: 'master',
                     credentialsId: "rajaGitAccess",
                     url: 'https://github.com/rajasekhar2304/test_iac.git'
             }
